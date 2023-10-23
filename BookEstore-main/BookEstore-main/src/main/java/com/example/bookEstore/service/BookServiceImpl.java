@@ -50,6 +50,37 @@ public class BookServiceImpl implements BookService {
 	public List<Book> showAllBooks() {
 		List<Book> books = bookDao.showAllBooks();
 		return books;
+	//	return bookDao.showAllBooks();
 	}
+
+	@Override
+	public int addBooks(Book book) {
+
+		int noOfRow = bookDao.addBooks(book);
+		
+
+		return noOfRow;
+	}
+
+	@Override
+	public void deleteBookByName(String name) {
+		bookDao.deleteBookByName(name);
+		
+	}
+
+	@Override
+	public int updateBooks(Book book,String name) {
+		int no=bookDao.updateBooks(book,name);
+		return no;
+		
+	}
+
+	@Override
+	public boolean isBookNameExists(String name) {
+		boolean exists = bookDao.isBookNameExists(name);
+	    return exists;
+	}
+
+	
 
 }

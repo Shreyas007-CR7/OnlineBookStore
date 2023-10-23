@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1" />
-<title>Customer Login</title>
+<title>Admin Login</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
@@ -76,12 +76,12 @@ input:hover {
 </head>
 
 <body>
-<script src="/js/validation.js"></script>
+<script src="/js/AdminValidation.js"></script>
 
-	<h3>Customer Login</h3>
+	<h3>Admin Login</h3>
 	<div class="mainForm">
 		<div class="container">
-			<form action="/loginhandler" method="post"  onsubmit="return validateLoginForm()" novalidate>
+			<form action="/adminhandler" method="post"  onsubmit="return validateLoginForm()" novalidate>
 				<label for="email">Email</label> <br /> <input type="email"
 					name="email" id="email" required /><br> <div id="email-error" style="color: red;"></div> <label for="pass">Password:</label>
 				<br /> <input type="password" name="pass" id="pass" required /><br><div id="pass-error" style="color: red;"></div> 
@@ -90,6 +90,6 @@ input:hover {
 			</form>
 		</div>
 	</div>
-	<a href="registration">If you are a new user Register Here !</a>
+	
 </body>
 </html>

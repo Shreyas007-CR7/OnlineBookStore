@@ -1,5 +1,6 @@
 package com.example.bookEstore.dao;
 
+import com.example.bookEstore.model.Book;
 import com.example.bookEstore.model.Customer;
 
 import java.util.List;
@@ -35,6 +36,12 @@ public class CustomerDaoImpl implements CustomerDao {
 		
 		List <Customer> customers = jdbcTemplate.query(SQL_SRCH_CUST, new CustomerMapper());
 	      return customers;
+	}
+
+	@Override
+	public List<Customer> showAllCustomers() {
+		List <Customer> customer = jdbcTemplate.query(SQL_SRCH_CUST, new CustomerMapper());
+	      return customer;
 	}
 
 }

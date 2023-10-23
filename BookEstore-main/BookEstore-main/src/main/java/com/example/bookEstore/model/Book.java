@@ -16,13 +16,20 @@ public class Book {
         this.price=price;
         this.quantity = quantity;
         this.image=image;
+        this.bookdesc=bookdesc;
     }
 
     public Book() {
         
     }
 
-    public String getBarcode() {
+    public Book(String name2, double price2, int quantity2) {
+		this.name=name2;
+		this.price=price2;
+		this.quantity=quantity2;
+	}
+
+	public String getBarcode() {
         return barcode;
     }
 
